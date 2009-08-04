@@ -307,7 +307,7 @@ typename TPGACLevelSetImageFilter<
   nbhIterator.SetLocation(idx);
 
   // offset of centre pixel
-#define c 13
+#define TPGAC_CPO 13
 
   // transfer nbh to our interior/exterior nbh
   int ieNbh[27];
@@ -390,7 +390,7 @@ typename TPGACLevelSetImageFilter<
     }
 
   // the centre voxel is NEVER used
-  n126nbh[13] = 0;
+  n126nbh[TPGAC_CPO] = 0;
 
   int n126labels[27];
   memset(n126labels, 0, 27 * sizeof(int));
